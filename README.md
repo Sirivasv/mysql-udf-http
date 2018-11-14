@@ -35,6 +35,7 @@ apt-get install make
 apt-get install gcc
 apt-get install libmysqlclient-dev
 apt-get install pkg-config
+apt-get install libcurl4-gnutls-dev
 ```
 
 ### 1. Install on Linux
