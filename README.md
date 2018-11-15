@@ -43,20 +43,12 @@ apt-get install libcurl4-gnutls-dev
 This sample is written for "/usr/local/webserver/mysql/" is your MySQL install path.
 
 ```
-ulimit -SHn 65535
-wget http://curl.haxx.se/download/curl-7.21.1.tar.gz
-tar zxvf curl-7.21.1.tar.gz
-cd curl-7.21.1/
-./configure --prefix=/usr
-make && make install
-cd ../
-
 echo "/usr/local/webserver/mysql/lib/mysql/" > /etc/ld.so.conf.d/mysql.conf
 /sbin/ldconfig
 wget http://mysql-udf-http.googlecode.com/files/mysql-udf-http-1.0.tar.gz
 tar zxvf mysql-udf-http-1.0.tar.gz
 cd mysql-udf-http-1.0/
-./configure --prefix=/usr/local/webserver/mysql --with-mysql=/usr/local/webserver/mysql/bin/mysql_config
+./configure --prefix=/usr/ --with-mysql=/usr/bin/mysql_config
 make && make install
 cd ../
 ```
